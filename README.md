@@ -53,7 +53,7 @@
 | id | INT | ID блюда |
 | category_id | INT | Категория |
 | name | NVARCHAR(MAX)| Название |
-| price | PRICE | Цена в рублях |
+| price | MONEY | Цена в рублях |
 | is_available | NVARCHAR(50) | В наличии? |
 
 #### `orders`
@@ -63,8 +63,8 @@
 | table_id | INT (FK→tables) | Стол |
 | menu_id | INT | Блюдо |
 | quantity | INT | Количество |
-| comment | INT | Комментарий к заказу |
-| total | INT | Сумма к оплате |
+| comment | NVARCHAR(MAX) | Комментарий к заказу |
+| total | MONEY | Сумма к оплате |
 
 #### `category`
 | Колонка | Тип | Описание |
