@@ -16,7 +16,7 @@
             <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Background="#252525"  Grid.Row="0" Orientation="Horizontal" >
-            <Image Source="/Image/logo.jpg" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"></Image>
+            <Image Source="logo.jpg" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"></Image>
             <TextBlock   FontSize="40"  Foreground="White"  Text="CheckMate"  FontFamily="Times New Roman" Margin="200,0,0,0"  VerticalAlignment="Center" ></TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="1" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" >
