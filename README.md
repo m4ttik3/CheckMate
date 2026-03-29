@@ -51,17 +51,16 @@
 | Колонка | Тип | Описание |
 |---------|------|-------------|
 | id | INT | ID блюда |
-| category | NVARCHAR(MAX) | Категория |
+| category_id | INT | Категория |
 | name | NVARCHAR(MAX)| Название |
 | price | PRICE | Цена в рублях |
-| is_available | BIT | В наличии? |
+| is_available | NVARCHAR(50) | В наличии? |
 
 #### `orders`
 | Колонка | Тип | Описание |
 |---------|------|-------------|
 | id | INT | Номер заказа |
 | table_id | INT (FK→tables) | Стол |
-| created_at | TIMESTAMP | Время создания |
 | total | MONEY | Сумма |
 
 #### `order_items`
@@ -71,4 +70,10 @@
 | order_id | INT (FK→orders) | Номер заказа |
 | menu_id | INT (FK→menu) | Что заказали |
 | quantity | INT | Количество |
-| comment | NVARCHAR(MAX) | Комментарий |
+| comment | NVARCHAR(MAX) | Комментарий к заказу |
+
+#### `category`
+| Колонка | Тип | Описание |
+|---------|------|-------------|
+| id | INT | ID Категории |
+| category_name | NVARCHAR(MAX) | Категория |
