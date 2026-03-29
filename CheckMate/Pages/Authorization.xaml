@@ -10,13 +10,25 @@
       Background="#121212">
 
     <Grid>
-        <StackPanel Width="250" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#252525"  Grid.Row="0" Orientation="Horizontal" >
+            <Image Source="/Image/logo.jpg" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"></Image>
+            <TextBlock   FontSize="40"  Foreground="White"  Text="CheckMate"  FontFamily="Times New Roman" Margin="200,0,0,0"  VerticalAlignment="Center" ></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" >
             <TextBlock Foreground="White"  Text="Логин" Width="200 " FontSize="14" FontFamily="Times New Roman"  ></TextBlock>
             <TextBox Foreground="White"  x:Name="Login" Width="200" Padding="10 " Margin="0,0,0,15"> </TextBox>
             <TextBlock Foreground="White" Text="Пароль" Width="200 " FontSize="14"  FontFamily="Times New Roman" ></TextBlock>
             <PasswordBox x:Name="Password" Foreground="White"   Width="200" Padding="10" Margin="0,0,0,15"></PasswordBox>
             <Button Content="Войти" Click="LoginButton_Click" Width="200" Height="30" Margin="10"></Button>
             <TextBlock Foreground="Red" Text="" Name="ErrorText" />
+        </StackPanel>
+        <StackPanel Background="#252525" Grid.Row="2" Orientation="Horizontal">
+            <TextBlock  Padding="10" FontSize="20"  Foreground="White"  Text="Наши соц сети:"  FontFamily="Times New Roman"  HorizontalAlignment="Center"  VerticalAlignment="Center" ></TextBlock>
         </StackPanel>
     </Grid>
 </Page>
