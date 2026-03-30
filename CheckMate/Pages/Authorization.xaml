@@ -26,10 +26,16 @@
         <StackPanel  Grid.Row="1" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF252525" >
             <TextBlock Foreground="White"  Text="Авторизация" FontSize="24" FontFamily="Times New Roman"  HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="10"></TextBlock>
             <TextBlock Foreground="White"  Text="Логин" Width="200 " FontSize="14" FontFamily="Times New Roman"  ></TextBlock>
-            <TextBox Background="White"  Foreground="Black" BorderThickness="0"  x:Name="Login" Width="200" Padding="10 " Margin="0,0,0,15"> </TextBox>
-            <TextBlock Foreground="White" Text="Пароль" Width="200 " FontSize="14"  FontFamily="Times New Roman" ></TextBlock>
-            <PasswordBox  x:Name="Password" Background="White"  Foreground="Black"   Width="200" Padding="10" Margin="0,0,0,15"></PasswordBox>
-            <Button Content="Войти" Click="LoginButton_Click" Width="200" Height="30" Margin="10" ></Button>
+            <Border CornerRadius="8" Background="White " Width="200" Height="45">
+                <TextBox Background="Transparent"  Foreground="Black" BorderThickness="0"  x:Name="Login" Width="200" Padding="10 " Margin="0,0,0,0" > </TextBox>
+            </Border>
+            <TextBlock Foreground="White" Text="Пароль" Width="200 " FontSize="14"  FontFamily="Times New Roman" Margin="0,15,0,0"></TextBlock>
+            <Border CornerRadius="8" Background="White " Width="200" Height="45" >
+            <PasswordBox  x:Name="Password" Background="Transparent" BorderThickness="0"  Foreground="Black"   Width="200" Padding="10" Margin="0,0,0,0"></PasswordBox>
+            </Border>
+            <Border CornerRadius="8" Background="#007ACC" Width="200" Height="35" Margin="0,30,0,0">
+            <Button  Content="Войти" Click="LoginButton_Click" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14" Cursor="Hand" Width="200" Height="35" />
+            </Border>
             <TextBlock Foreground="Red" Text="" Name="ErrorText" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Grid.Row="2"  Background="#FF252525"   >
