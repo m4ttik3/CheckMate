@@ -6,29 +6,34 @@
       xmlns:local="clr-namespace:CheckMate.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Авторизация" Height="450" Width="350"
+      Title="Авторизация"
       Background="#121212">
 
-    <Grid>
+    <Grid  >
         <Grid.RowDefinitions>
             <RowDefinition Height="80"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Background="#252525"  Grid.Row="0" Orientation="Horizontal" >
-            <Image Source="/logo.jpg" Width="80" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"></Image>
-            <TextBlock   FontSize="40"  Foreground="White"  Text="CheckMate"  FontFamily="Times New Roman" Margin="200,0,0,0"  VerticalAlignment="Center" ></TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <Grid   Background="#FF252525" Grid.Row="0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="/logo.jpg" Width="80" Margin="10" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Foreground="White"  Text="CheckMate" Width="299" FontSize="40" FontFamily="Times New Roman" HorizontalAlignment="Center" VerticalAlignment="Center"  ></TextBlock>
+        </Grid>
+        <StackPanel  Grid.Row="1" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FF252525" >
+            <TextBlock Foreground="White"  Text="Авторизация" FontSize="24" FontFamily="Times New Roman"  HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="10"></TextBlock>
             <TextBlock Foreground="White"  Text="Логин" Width="200 " FontSize="14" FontFamily="Times New Roman"  ></TextBlock>
-            <TextBox Foreground="White"  x:Name="Login" Width="200" Padding="10 " Margin="0,0,0,15"> </TextBox>
+            <TextBox Background="White"  Foreground="Black" BorderThickness="0"  x:Name="Login" Width="200" Padding="10 " Margin="0,0,0,15"> </TextBox>
             <TextBlock Foreground="White" Text="Пароль" Width="200 " FontSize="14"  FontFamily="Times New Roman" ></TextBlock>
-            <PasswordBox x:Name="Password" Foreground="White"   Width="200" Padding="10" Margin="0,0,0,15"></PasswordBox>
-            <Button Content="Войти" Click="LoginButton_Click" Width="200" Height="30" Margin="10"></Button>
-            <TextBlock Foreground="Red" Text="" Name="ErrorText" />
+            <PasswordBox  x:Name="Password" Background="White"  Foreground="Black"   Width="200" Padding="10" Margin="0,0,0,15"></PasswordBox>
+            <Button Content="Войти" Click="LoginButton_Click" Width="200" Height="30" Margin="10" ></Button>
+            <TextBlock Foreground="Red" Text="" Name="ErrorText" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
         </StackPanel>
-        <StackPanel Background="#252525" Grid.Row="2" Orientation="Horizontal">
-            <TextBlock  Padding="10" FontSize="20"  Foreground="White"  Text="Наши соц сети:"  FontFamily="Times New Roman"  HorizontalAlignment="Center"  VerticalAlignment="Center" ></TextBlock>
+        <StackPanel Grid.Row="2"  Background="#FF252525"   >
+            <TextBlock Foreground="White"  Text="Telegram" FontSize="19" FontFamily="Times New Roman"  HorizontalAlignment="Center"  VerticalAlignment="Center" Margin="15"/>
         </StackPanel>
     </Grid>
 </Page>
