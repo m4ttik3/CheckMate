@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Text="КУкусики кукурузики" FontWeight="Bold" Height="30" HorizontalAlignment="Center" > </TextBlock>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>
