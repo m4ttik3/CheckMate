@@ -5,8 +5,164 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CheckMate.Pages"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800">
-    <Grid>
-        
+        Title="Menu" Height="450" Width="800"   Background="#121212" Cursor=""
+        Loaded="Window_Loaded"
+        >
+
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- Хедер, я скопировал эти стрелки, потому что не знал как коментить xD  -->
+        <Grid Grid.Row="0" Background="#FF252525">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="250"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <Border CornerRadius="8" Background="#007ACC" Width="140" Height="34"  Margin="13,0,0,0">
+                    <Button  Content="Напитки" Click="Drink_Click" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35" />
+                </Border>
+                <Border CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="30">
+                    <Button  Content="Закуски" Click="Snacks_Click" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35" />
+                </Border>
+                <Border CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="20" >
+                    <Button  Content="Салаты" Click="Salat_Click" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35" />
+                </Border>
+            </StackPanel >
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+                      <TextBlock Foreground="White"  Text="Столик:" FontSize="24" FontFamily="Times New Roman"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30" ></TextBlock>
+                <Border CornerRadius="8" Background="White " Width="60" Height="35">
+                    <TextBox Background="Transparent"  Foreground="Black" BorderThickness="0"  x:Name="Stol" Width="60" HorizontalAlignment="Center" ></TextBox>
+                </Border>
+            </StackPanel>
+        </Grid>
+        <!-- Основное меню  -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="#FF545454">
+            <StackPanel x:Name="ProductList">
+                <!-- Тар тар  -->
+                <Border CornerRadius="20" Background="#FF87898A"   Margin="10" Tag="Snaks" x:Name="Card1">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                            <Image  Grid.Column="0" Width="180" Height="180" Source="/Tar-Tar.jpg" />
+                        <TextBlock Grid.Column="1" x:Name="Card1Title"  Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" x:Name="Card1is_available" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock  Grid.Column="3" x:Name="Card1Price"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                            <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                        </Border>
+                    </Grid>
+                </Border>
+                <!-- Грушевая запеканка с нарезкой из фруктов и настойкой под градусом  -->
+                <Border CornerRadius="20" Background="#FF87898A"   Margin="10" Tag="Snaks">
+                    <Grid  >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Grid.Column="0" Width="180" Height="180" Source="/GrushaSnack.png" />
+                        <TextBlock Grid.Column="1" x:Name="Card2Title"  Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" x:Name="Card2is_available"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock  Grid.Column="3" x:Name="Card2Price"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                        </Border>
+                    </Grid>
+                </Border>
+                <!-- Салат запеченный с баклажанами и трюфельным соусом  -->
+                <Border CornerRadius="20" Background="#FF87898A"   Margin="10" Tag="Salat">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Grid.Column="0" Width="180" Height="180" Source="/BaklajanSalat.png" />
+                        <TextBlock Grid.Column="1" x:Name="Card3Title" Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" x:Name="Card3is_available"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock  Grid.Column="3" x:Name="Card3Price" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                        </Border>
+                    </Grid>
+                </Border>
+                <!-- Салат с коркумусом с добавлением базиликсого соуса под кунжутной настойкой  -->
+                <Border CornerRadius="20" Background="#FF87898A"   Margin="10" Tag="Salat">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Grid.Column="0" Width="180" Height="180" Source="/KorkomusSalat.png" />
+                        <TextBlock Grid.Column="1" x:Name="Card4Title"  Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" x:Name="Card4is_available"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock  Grid.Column="3" x:Name="Card4Price"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                        </Border>
+                    </Grid>
+                </Border>
+                <!-- Пинаколада  -->
+                <Border CornerRadius="20" Background="#FF87898A"   Margin="10" Tag="Drink">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Grid.Column="0" Width="180" Height="180" Source="/PinokaladaNapitok.png" />
+                        <TextBlock Grid.Column="1" x:Name="Card5Title"  Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" x:Name="Card5is_available"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock  Grid.Column="3" x:Name="Card5Price"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                        </Border>
+                    </Grid>
+                </Border>
+                <!-- Кровавая Мери  -->
+                <Border CornerRadius="20" Background="#FF87898A"   Margin="10" Tag="Drink">
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Grid.Column="0" Width="180" Height="180" Source="/KrovMaryNapitok.png" />
+                        <TextBlock Grid.Column="1" x:Name="Card6Title"  Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Column="2" x:Name="Card6is_available"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <TextBlock  Grid.Column="3" x:Name="Card6Price" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
+                        <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                        </Border>
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </ScrollViewer>
+        <!-- Подвал -->
+        <StackPanel Grid.Row="2"  Background="#FF252525"   >
+            <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                <Button  Content="Оформить заказ" Click="Order_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+            </Border>
+        </StackPanel>
     </Grid>
 </Window>

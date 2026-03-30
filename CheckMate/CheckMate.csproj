@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Resource Include="BaklajanSalat.png" />
     <Content Include="Entities\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -193,6 +194,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="GrushaSnack.png" />
+    <Resource Include="KorkomusSalat.png" />
+    <Resource Include="KrovMaryNapitok.png" />
+    <Resource Include="PinokaladaNapitok.png" />
+    <Resource Include="Tar-Tar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
