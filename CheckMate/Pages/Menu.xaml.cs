@@ -23,6 +23,11 @@ namespace CheckMate.Pages
 {
     /// <summary>
 
+=========
+>>>>>>>>> Temporary merge branch 2
+
+=========
+>>>>>>>>> Temporary merge branch 2
     /// Логика взаимодействия для Menu.xaml
     /// </summary>
     public partial class Menu : Window
@@ -87,9 +92,35 @@ namespace CheckMate.Pages
             else Card6is_available.Foreground = Brushes.Red;
         }
 
-        private void Drink_Click(object sender, RoutedEventArgs e) { }
-        private void Snacks_Click(object sender, RoutedEventArgs e) { }
-        private void Salat_Click(object sender, RoutedEventArgs e) { }
+        private void Drink_Click(object sender, RoutedEventArgs e)
+        { 
+            FilterCards("Drink"); 
+        }
+
+        private void Snacks_Click(object sender, RoutedEventArgs e)
+        {
+            FilterCards("Snacks");
+        }
+        private void Salat_Click(object sender, RoutedEventArgs e)
+        {
+            FilterCards("Salat");
+        }
+
+        private void FilterCards(string category)
+        {
+            foreach (Border card in ProductList.Children.OfType<Border>())
+            {
+                if (card.Tag.ToString() == category || category == "All")
+                {
+                    card.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    card.Visibility = Visibility.Collapsed;
+                }
+
+            }
+        }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -119,8 +150,6 @@ namespace CheckMate.Pages
         }
 
         private void Order_Click(object sender, RoutedEventArgs e)
-
-        private void Drink_Click(object sender, RoutedEventArgs e)
         {
             if (Cart.Count == 0)
             {
