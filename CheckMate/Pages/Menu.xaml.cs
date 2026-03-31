@@ -18,16 +18,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace CheckMate.Pages
 {
     /// <summary>
-
-=========
->>>>>>>>> Temporary merge branch 2
-
-=========
->>>>>>>>> Temporary merge branch 2
     /// Логика взаимодействия для Menu.xaml
     /// </summary>
     public partial class Menu : Window
@@ -93,10 +86,9 @@ namespace CheckMate.Pages
         }
 
         private void Drink_Click(object sender, RoutedEventArgs e)
-        { 
-            FilterCards("Drink"); 
+        {
+            FilterCards("Drink");
         }
-
         private void Snacks_Click(object sender, RoutedEventArgs e)
         {
             FilterCards("Snacks");
@@ -123,6 +115,7 @@ namespace CheckMate.Pages
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
+
         {
             Button clickedButton = (Button)sender;
             int index = Convert.ToInt32(clickedButton.Tag);
@@ -156,13 +149,6 @@ namespace CheckMate.Pages
                 MessageBox.Show("Корзина пуста! Добавьте товары.");
                 return;
             }
-            FilterCards("Drink");
-        }
-
-        private void Snacks_Click(object sender, RoutedEventArgs e)
-        {
-            FilterCards("Snacks");
-        }
 
             if (string.IsNullOrWhiteSpace(Stol.Text))
             {
@@ -182,33 +168,6 @@ namespace CheckMate.Pages
 
             // Создаем страницу и передаем данные
             Order orderPage = new Order(Menu.Cart, Stol.Text);
-        private void Salat_Click(object sender, RoutedEventArgs e)
-        {
-            FilterCards("Salat");
-        }
-
-        private void Add_Click(object sender, RoutedEventArgs e)
-        {
-        }
-        private void FilterCards(string category)
-        {
-            foreach (Border card in ProductList.Children.OfType<Border>())
-            {
-                if (card.Tag.ToString() == category || category == "All")
-                {
-                   card.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    card.Visibility = Visibility.Collapsed;
-                }
-                
-            }
-        }
-        private void Order_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
 
             // Вставляем страницу в окно
             Frame frame = new Frame();
@@ -218,11 +177,6 @@ namespace CheckMate.Pages
             // Открываем заказ и закрываем меню
             hostWindow.Show();
             this.Close();
-        }
-
-        private void AllTovar_Click(object sender, RoutedEventArgs e)
-        {
-            FilterCards("All");
         }
     } 
 } 
