@@ -37,7 +37,7 @@
                 <TextBlock Foreground="White" Text="ИТОГО: " FontSize="28" FontFamily="Times New Roman" FontWeight="Bold"/>
                 <TextBlock x:Name="TotalPriceText" Foreground="#007ACC" Text="0 ₽" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold" Margin="10,0,20,0"/>
                 <Border CornerRadius="8" Background="#007ACC" Width="160" Height="40">
-                    <Button Content="Подтвердить" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" Cursor="Hand"/>
+                    <Button Content="Подтвердить" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" Cursor="Hand" Click="Button_Click_1"/>
                 </Border>
             </StackPanel>
         </Grid>
