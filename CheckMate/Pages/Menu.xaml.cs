@@ -20,7 +20,7 @@ using System.Windows.Shapes;
 namespace CheckMate.Pages
 {
     /// <summary>
-    
+
     /// Логика взаимодействия для Menu.xaml
     /// </summary>
     public partial class Menu : Window
@@ -107,37 +107,63 @@ namespace CheckMate.Pages
 
             if (products[5].is_available == "В наличии")
             {
-                Card6is_available.Foreground = Brushes.Green; 
+                Card6is_available.Foreground = Brushes.Green;
             }
             else
             {
                 Card6is_available.Foreground = Brushes.Red;
             }
-         
+
 
         }
 
+
         private void Drink_Click(object sender, RoutedEventArgs e)
         {
+            FilterCards("Drink");
         }
 
         private void Snacks_Click(object sender, RoutedEventArgs e)
         {
+            FilterCards("Snacks");
         }
 
         private void Salat_Click(object sender, RoutedEventArgs e)
         {
-
+            FilterCards("Salat");
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
+        }
+        private void FilterCards(string category)
+        {
+            foreach (Border card in ProductList.Children.OfType<Border>())
+            {
+                if (card.Tag.ToString() == category || category == "All")
+                {
+                   card.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    card.Visibility = Visibility.Collapsed;
+                }
+                
+            }
+        }
+        private void Order_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 
-        private void Order_Click(object sender, RoutedEventArgs e)
+        private void AllTovar_Click(object sender, RoutedEventArgs e)
         {
-
+            FilterCards("All");
         }
     }
 }
