@@ -57,7 +57,7 @@
                         <TextBlock Grid.Column="2" x:Name="Card1is_available" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card1Price"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                             <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
-                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                            <Button  Content="Добавить" Click="Add_Click" Tag="0" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
                 </Border>
@@ -76,7 +76,7 @@
                         <TextBlock Grid.Column="2" x:Name="Card2is_available"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card2Price"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
-                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                            <Button  Content="Добавить" Click="Add_Click" Tag="1"  Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
                 </Border>
@@ -95,7 +95,7 @@
                         <TextBlock Grid.Column="2" x:Name="Card3is_available"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card3Price" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
-                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                            <Button  Content="Добавить" Click="Add_Click" Tag="2" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
                 </Border>
@@ -114,7 +114,7 @@
                         <TextBlock Grid.Column="2" x:Name="Card4is_available"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card4Price"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
-                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                            <Button  Content="Добавить" Click="Add_Click" Tag="3" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
                 </Border>
@@ -133,7 +133,7 @@
                         <TextBlock Grid.Column="2" x:Name="Card5is_available"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card5Price"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
-                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                            <Button  Content="Добавить" Click="Add_Click" Tag="4" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
                 </Border>
@@ -152,7 +152,7 @@
                         <TextBlock Grid.Column="2" x:Name="Card6is_available"  FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card6Price" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
-                            <Button  Content="Добавить" Click="Add_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
+                            <Button  Content="Добавить" Click="Add_Click" Tag="5" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
                 </Border>

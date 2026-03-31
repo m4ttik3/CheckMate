@@ -9,6 +9,37 @@
       Title="Order">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Хедер -->
+            <RowDefinition Height="*"/>
+            <!-- Список товаров -->
+            <RowDefinition Height="Auto"/>
+            <!-- Итого -->
+        </Grid.RowDefinitions>
+
+        <!-- Хедер -->
+        <Grid Grid.Row="0" Background="#FF252525" Height="50">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Foreground="White" Text="Столик: " FontSize="20" Margin="20,0,0,0" FontFamily="Times New Roman"/>
+                <TextBlock x:Name="TableNumberText" Foreground="#007ACC" Text="" FontSize="20" FontWeight="Bold" FontFamily="Times New Roman"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Список товаров -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="OrderItemsPanel" Margin="10"/>
+        </ScrollViewer>
+
+        <!-- Подвал с итогом -->
+        <Grid Grid.Row="2" Background="#FF252525" Height="80">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20,0">
+                <TextBlock Foreground="White" Text="ИТОГО: " FontSize="28" FontFamily="Times New Roman" FontWeight="Bold"/>
+                <TextBlock x:Name="TotalPriceText" Foreground="#007ACC" Text="0 ₽" FontSize="28" FontFamily="Times New Roman" FontWeight="Bold" Margin="10,0,20,0"/>
+                <Border CornerRadius="8" Background="#007ACC" Width="160" Height="40">
+                    <Button Content="Подтвердить" Background="Transparent" BorderThickness="0" Foreground="White" FontSize="16" Cursor="Hand"/>
+                </Border>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Page>

@@ -21,7 +21,6 @@ namespace CheckMate.Entities
         }
     
         public int id { get; set; }
-        public Nullable<int> category_id { get; set; }
         public string name { get; set; }
         public decimal Price { get; set; }
         public string is_available { get; set; }

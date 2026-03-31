@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CheckMate.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,14 @@ namespace CheckMate.Pages
     /// </summary>
     public partial class Order : Page
     {
-        public Order()
+        private List<CartItems> _cart;
+        private string _tableNumber;
+        public Order(List<CartItems> cart, string tableNumber)
         {
             InitializeComponent();
+           
         }
+
+      
     }
 }

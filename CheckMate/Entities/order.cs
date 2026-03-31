@@ -15,8 +15,6 @@ namespace CheckMate.Entities
     public partial class order
     {
         public int id { get; set; }
-        public Nullable<int> table_id { get; set; }
-        public Nullable<int> menu_id { get; set; }
         public int quantity { get; set; }
         public string Comment { get; set; }
         public decimal total { get; set; }

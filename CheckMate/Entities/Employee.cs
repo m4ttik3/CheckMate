@@ -16,7 +16,6 @@ namespace CheckMate.Entities
     {
         public int id { get; set; }
         public string full_name { get; set; }
-        public Nullable<int> role_id { get; set; }
         public string login { get; set; }
         public string password { get; set; }
     
