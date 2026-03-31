@@ -114,6 +114,11 @@ namespace CheckMate.Pages
             }
         }
 
+        private void AllTovar_Click(object sender, RoutedEventArgs e)
+        {
+            FilterCards("All");
+        }
+
         private void Add_Click(object sender, RoutedEventArgs e)
 
         {
