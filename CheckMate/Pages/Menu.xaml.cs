@@ -25,7 +25,7 @@ namespace CheckMate.Pages
     /// </summary>
     public partial class Menu : Window
     {
-        private static CheckMateEntities3 entities { get; } = new CheckMateEntities3();
+        private static CheckMateEntities4 entities { get; } = new CheckMateEntities4();
 
         // Список корзины
         public static List<CartItems> Cart = new List<CartItems>();

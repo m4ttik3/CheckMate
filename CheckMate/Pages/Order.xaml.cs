@@ -126,6 +126,7 @@ namespace CheckMate.Pages
             // Возвращаемся в меню (открываем заново, так как мы его закрыли)
             Menu newMenu = new Menu();
             newMenu.Show();
+            Window.GetWindow(this).Close();
         }
     }
 }

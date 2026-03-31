@@ -36,7 +36,7 @@
                 </Border>
             </StackPanel >
             <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
-                      <TextBlock Foreground="White"  Text="Столик:" FontSize="24" FontFamily="Times New Roman"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30" ></TextBlock>
+                <TextBlock Foreground="White"  Text="Столик:" FontSize="24" FontFamily="Times New Roman"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30" ></TextBlock>
                 <Border CornerRadius="8" Background="White " Width="60" Height="35">
                     <TextBox Background="Transparent"  Foreground="Black" BorderThickness="0"  x:Name="Stol" Width="60" HorizontalAlignment="Center" ></TextBox>
                 </Border>
@@ -55,11 +55,11 @@
                             <ColumnDefinition Width="Auto"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                            <Image  Grid.Column="0" Width="180" Height="180" Source="/Tar-Tar.jpg" />
+                        <Image  Grid.Column="0" Width="180" Height="180" Source="/Tar-Tar.jpg" />
                         <TextBlock Grid.Column="1" x:Name="Card1Title"  Foreground="White" Margin="10" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock Grid.Column="2" x:Name="Card1is_available" FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
                         <TextBlock  Grid.Column="3" x:Name="Card1Price"   FontWeight="Bold" Foreground="White" Margin="20,0,0,0" FontFamily="Segoe UI" FontSize="24" VerticalAlignment="Center"/>
-                            <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+                        <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
                             <Button  Content="Добавить" Click="Add_Click" Tag="0" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
                         </Border>
                     </Grid>
@@ -162,10 +162,19 @@
             </StackPanel>
         </ScrollViewer>
         <!-- Подвал -->
-        <StackPanel Grid.Row="2"  Background="#FF252525"   >
-            <Border Grid.Column="4" CornerRadius="8" Background="#007ACC" Width="140" Height="35" Margin="10" HorizontalAlignment="Right">
+        <Grid Grid.Row="2"  Background="#FF252525"   >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0"  Foreground="White"  Text="Чаевые: " FontSize="24" FontFamily="Times New Roman"  HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="54,14,0,0"></TextBlock>
+            <Border Grid.Column="1"  CornerRadius="8" Background="White " Width="60" Height="35">
+                <TextBox   Background="Transparent"  Foreground="Black" BorderThickness="0"  Width="60" HorizontalAlignment="Center" ></TextBox>
+            </Border>
+            <Border Grid.Column="2" CornerRadius="8" Background="#007ACC"  Height="35" Margin="10" HorizontalAlignment="Right">
                 <Button  Content="Оформить заказ" Click="Order_Click" Background="Transparent" BorderThickness="0"  Foreground="White" FontSize="14" Cursor="Hand" Width="140" Height="35"  />
             </Border>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Window>

@@ -242,7 +242,7 @@
           <End Role="Tables" Type="Self.Table" Multiplicity="0..1" />
           <End Role="orders" Type="Self.order" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="CheckMateEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CheckMateEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Category" />
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="menus" EntityType="Self.menu" />
@@ -273,7 +273,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище CheckMateModelContainer" CdmEntityContainer="CheckMateEntities3">
+        <EntityContainerMapping StorageEntityContainer="Хранилище CheckMateModelContainer" CdmEntityContainer="CheckMateEntities4">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="CheckMateModel.Category">
               <MappingFragment StoreEntitySet="Category">

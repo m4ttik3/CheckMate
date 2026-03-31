@@ -13,10 +13,10 @@ namespace CheckMate.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CheckMateEntities3 : DbContext
+    public partial class CheckMateEntities4 : DbContext
     {
-        public CheckMateEntities3()
-            : base("name=CheckMateEntities3")
+        public CheckMateEntities4()
+            : base("name=CheckMateEntities4")
         {
         }
     
